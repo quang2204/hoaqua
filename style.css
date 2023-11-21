@@ -297,6 +297,54 @@ li {
     padding: 4px 9px;
 }
 
+.list .item:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.list .item:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.section-box {
+    padding: 10px 50px;
+}
+
+.section-box h2 {
+    font-size: 35px;
+}
+
+.list {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(6,
+            1fr);
+    /* Cố định chiều rộng tối thiểu là 200px, và chia đều cột */
+    /* gap: 10px; Khoảng cách giữa các item */
+    max-width: 1100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.item {
+    border: 1px solid rgb(222, 220, 220);
+    text-align: center;
+}
+
+.item img {
+    width: 60px;
+}
+
+@media (max-width: 800px) {
+
+    /* Khi kích thước màn hình nhỏ hơn hoặc bằng 600px, chuyển sang 2 cột */
+    .list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
 #than {
     background-color: #fffdf1;
 
