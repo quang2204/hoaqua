@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="img/logo-hoa-qua.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/figma/logo.svg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="gh.css" />
-    <title>Shop hoa quả</title>
+    <title>DMart</title>
   </head>
   <body>
     <header>
@@ -263,6 +263,7 @@
           </div>
         </div>
       </div>
+      <br>
       <div class="nk">
         <div class="container">
           <div class="con">
@@ -785,242 +786,6 @@
             <span class="button-content" id="tintuc">Mua Thêm </span>
           </button>
         </center>
-      </div>
-    </div>
-    <div class="gh" id="gh">
-      <div class="chua-sp">
-        <p style="margin-top: 50px; font-size: 17px" class="spp-p">
-          Chưa có sản phẩm nào trong giỏ hàng.
-        </p>
-        <button class="buttonn" onclick="quaylai()">
-          Quay trở lại cửa hàng
-        </button>
-      </div>
-
-      <div class="spp">
-        <form action="">
-          <table>
-            <thead>
-              <tr>
-                <th
-                  class="product th left"
-                  colspan="3"
-                  style="padding-right: 200px"
-                >
-                  Sản phẩm
-                </th>
-                <th class="product-prices th center block">Giá</th>
-                <th class="product-quantity">Số lượng</th>
-                <th class="product-subtotal right block">Tổng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cart-item">
-                <td>
-                  <div class="remote">
-                    <p>x</p>
-                  </div>
-                </td>
-                <td class="product-thumbnail th"></td>
-                <td class="product-name nk">Vải nhập khẩu</td>
-                <td class="product-price amount th"></td>
-                <td class="quantity th">
-                  <button class="is-form minus" type="button">-</button>
-                  <input
-                    type="text"
-                    class="input-qty"
-                    step="1"
-                    min="0"
-                    max="100"
-                    value="1"
-                  />
-                  <button class="is-form plus" type="button">+</button>
-                </td>
-                <td class="product-price amount tong right">
-                  <p></p>
-                </td>
-                <br />
-              </tr>
-            </tbody>
-          </table>
-          <button class="muasam" onclick="ttms()">
-            <i class="bi bi-arrow-left"></i> Tiếp tục mua sắp
-          </button>
-
-          <button class="cn" type="button" onclick="capnhat()">
-            Cập nhật giỏ hàng
-          </button>
-        </form>
-        <div class="thanhtoan">
-          <div class="tinhtong">
-            <h4>Tính tổng đơn hàng</h4>
-          </div>
-          <div class="tongs">
-            <div class="tongphu">
-              <p>Tiền vận chuyển</p>
-              <h4>30.000₫</h4>
-            </div>
-            <div class="tongss">
-              <p>Tổng thanh toán</p>
-              <h4 class="tong-h4 right"></h4>
-            </div>
-          </div>
-          <div class="pay">
-            <button class="thtt" onclick="thtt()">Tiến hành thanh toán</button>
-            <br />
-            <button class="uudai">
-              <i class="bi bi-tag-fill"></i>Phiếu ưu đãi</button
-            ><br />
-            <input type="text" placeholder="Mã ưu đãi" /><br />
-            <button class="ad">Áp dụng</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="thongtin" id="thongtin">
-      <div id="t">
-        <form action="" class="form">
-          <div class="no">
-            <div class="p">* Bắt buộc nhập</div>
-            <p id="ten-loi"></p>
-            <p id="dc-loi"></p>
-            <p id="tp-loi"></p>
-            <p id="sdt-loi"></p>
-            <p class="error" id="errorMessage" style="font-size: 18px"></p>
-          </div>
-
-          <h3 style="margin-bottom: 8px">Thông tin thanh toán</h3>
-          <label for="name">Họ và tên * </label>
-          <input
-            type="text"
-            id="product-name"
-            placeholder="Họ và tên"
-            onblur="hoteen()"
-            class="input"
-          />
-          <label for="name">Tên công ty </label>
-
-          <input
-            type="text"
-            id="product-tency"
-            placeholder="Tên công ty"
-            class="input"
-          />
-          <label for="dc">Địa chỉ *</label>
-          <input
-            type="text"
-            placeholder="Địa chỉ"
-            id="product-dc"
-            onblur="diachi()"
-            class="input"
-          />
-          <label for="name">Tỉnh thành phố *</label>
-          <input
-            type="text"
-            id="product-tp"
-            placeholder="Tỉnh thành phố"
-            onblur="thanhpho()"
-            class="input"
-          />
-          <label for="name">Số điện thoại *</label>
-          <input
-            type="text"
-            id="product-sdt"
-            placeholder="Số điện thoại "
-            onblur="dienthoai()"
-            class="input"
-          />
-          <h3>Thông tin bổ sung</h3>
-          <label for="">Ghi chú bổ sung</label>
-          <textarea
-            name=""
-            id="textt"
-            cols="2"
-            rows="5"
-            placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
-            class="input"
-          ></textarea>
-        </form>
-        <div class="donhang">
-          <h3>ĐƠN HÀNG CỦA BẠN</h3>
-          <table>
-            <thead>
-              <tr class="">
-                <th class="product-sp product">Sản phẩm</th>
-                <th class="product-total product">Tổng</th>
-              </tr>
-            </thead>
-            <tbody class="cart1">
-              <tr class="cart">
-                <!-- <td id="tt-name">
-                    Cà chua <strong class="tt-quantity">x1</strong>
-                  </td>
-                  <td>90.000&</td> -->
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr class="tvc">
-                <th class="left">Tiền vận chuyển</th>
-                <td class="right">30.000₫</td>
-              </tr>
-              <tr class="tvc" style="border-bottom: 2px solid #ccc">
-                <th>Tổng thanh toán</th>
-                <td id="product-totals">30.000₫</td>
-              </tr>
-            </tfoot>
-          </table>
-          <div class="pttt">
-            <input type="radio" name="tt" id="ck" class="ck" checked />
-            <label for="" id="ttck">Thanh toán chuyển khoản</label><br />
-            <input type="radio" name="tt" id="tm" class="ck" />
-            <label for=""> Trả tiền mặt khi nhận hàng</label>
-          </div>
-          <button class="dathang" onclick="muangay()" type="button">
-            Đặt hàng
-          </button>
-          <p style="font-size: 15px; max-width: 660px">
-            Your personal data will be used to process your order, support your
-            experience throughout this website, and for other purposes described
-            in our <span class="span">chính sách riêng tư.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="chitiet">
-      <div class="chitiett">
-        <h2>Đơn hàng của bạn</h2>
-        <table>
-          <thead>
-            <tr class="">
-              <th class="left chitiet-p">Sản phẩm</th>
-              <th class="right">Tổng</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="left chitiet-p">
-                <p>Cà chua Đà Lạt <strong>x1</strong></p>
-              </td>
-              <td class="right">
-                <span>20.000d</span>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th class="left chitiet-p">Tiền vận chuyển</th>
-              <td class="right">340.000₫</td>
-            </tr>
-            <tr>
-              <th class="left chitiet-p">Phương thức thanh toán:</th>
-              <td class="right">Chuyển khoản ngân hàng</td>
-            </tr>
-            <tr>
-              <th class="left chitiet-p">Tổng cộng:</th>
-              <td class="right">340.000₫</td>
-            </tr>
-          </tfoot>
-        </table>
       </div>
     </div>
     <footer>
