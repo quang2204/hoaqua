@@ -288,16 +288,13 @@ li {
     color: #fff;
 }
 
-.tt {
-    padding: 5px 10px;
 
-}
 
-.tt.active {
+.active {
     background-color: #669933;
     color: white;
     border-radius: 18px;
-
+    padding: 4px 9px;
 }
 
 #than {
